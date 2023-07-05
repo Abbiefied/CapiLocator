@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/9e861a04ca.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9e861a04ca.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300;700&display=swap"
+        rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Cost of Living Comparison</title>
+</head>
+
+<body>
+    <!--Navbar starts here-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand"><span><i
+                    class="fa-solid fa-location-arrow fa-2x arrow text-warning"></i></span>Capilocator</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Cost of living</a>
+                    <div class="dropdown-menu scrollable-menu" role="menu" id="countries-list">
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparison.html">Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--Navbar ends here-->
+    <!--About CapiLocator-->
+
+    <section id="about-site">
+        <div class="container about-site mt-5">
+            <h1 class="w-100" style="font-weight: bold; font-style: italic;">About <span
+                    style="color: #ffdf2b;">CapiLocator</span></h1>
+            <h6 class="text-white" style="line-height: 2;">CapiLocator is your travel and relocation buddy, designed to
+                help you locate
+                capital cities around the world and compare the cost of living in these cities.
+                CapiLocator provides data on various expenses, including food, housing, transportation, healthcare,
+                and more, to help you make informed decisions about your
+                travel or relocation plans. The waterfall development approach was used develop the website.
+                The development stack is HTML5, CSS, jQuery, Bootstrap 5, and Chart.js. The data on the website are
+                gotten
+                from Rapid API, Rest Countries API, and API Ninja. All the pictures were downloaded from Unsplash.
+            </h6>
+            <div class="row display-flex about pt-2 pb-5 mb-5 align-items-center">
+                <div class="col-sm-6 p-0">
+                    <h1 class="w-100" style="font-weight: bold; font-style: italic;">About <span
+                            style="color: #ffdf2b;">Developer</span></h1>
+                    <img src="../images/Ganiyat.jpg" class="w-100" alt="">
+                </div>
+
+                <div class="col-sm-6 p-2">
+                    <h6 class="text-white" style="line-height: 2;">Passionate and self-driven young leader with an
+                        interest in technology and research,
+                        I am currently pursuing a degree in Computing with a focus on Software Engineering at African
+                        Leadership College. As a Mastercard
+                        Foundation Scholar, I have taken courses in Fundamentals of Software Engineering, Math for
+                        Computing, Introduction to Network
+                        Technology, CCNA, Programming, Data & Decision, Database Development, Web Platform Development,
+                        Security Landscape, and Projects.
+                        Additionally, I hold a Diploma in Science Laboratory Technology from D.S Adegbenro ICT
+                        Polytechnic.
+                        I have proven my ability to work with difficult situations and high critical thinking skills and
+                        emotional intelligence. As a Web Developer,
+                        I have developed websites for various businesses using WordPress Content Management System.
+                        In addition to my professional work, I have a keen interest in technology, exploring my
+                        curiosities, women and youth empowerment,
+                        and research. I possess skills in web development, leadership, data analysis, Python, HTML/CSS,
+                        Java, problem-solving, critical thinking,
+                        and flexibility. I hold online certifications from Huawei Talent Online and the Youth
+                        Development Programme in Website Development.
+                        I am an open-minded and always curious individual, eager to learn new things and explore. Please
+                        feel free to connect with me to
+                        discuss exciting opportunities in technology and research.
+                    </h6>
+                </div>
+            </div>
+
+            <!--Social media links-->
+            <div class="socials text-center">
+                <a href="https://www.facebook.com/adekunleganiyatabiola"><i class="fab fa-facebook-f fa-2x mx-2" style="color: #3b5998;"></i></a>
+                <a href="mailto:g.adekunle@alustudent.com"><i class="fab fa-google fa-2x mx-2" style="color: #dd4b39;"></i></a>
+                <a href="https://www.instagram.com/theofficial_abbie/"><i class="fab fa-instagram fa-2x mx-2" style="color: #ac2bac;"></i></a>
+                <a href=https://www.linkedin.com/in/ganiyatadekunle><i class="fab fa-linkedin-in fa-2x mx-2" style="color: #0082ca;"></i></a>
+            </div>
+        </div>
+        <!--Div to create wide gutter between containers-->
+        <div class="gutter"></div>
+    </section>
+
+
+
+    <!--Footer-->
+    <footer class="text-center text-lg-start text-muted">
+        <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3 pt-4">
+                <div class="col-md-5 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4">
+                        CapiLocator
+                    </h5>
+                    <div class="footer-text">
+                        <p>CapiLocator is a website designed to help users locate
+                            capital cities around the world and compare the cost of l
+                            iving in these cities. The website provides data on various
+                            expenses, including food, housing, transportation, healthcare,
+                            and more, to help users make informed decisions about their
+                            travel or relocation plans.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4">
+                        Useful Links
+                    </h5>
+                    <p><a href="comparison.html" class="text-reset">Comparison Tool</a></p>
+                    <p><a href="https://www.international-schools-database.com/" target="_blank"
+                            class="text-reset">Schools</a></p>
+                    <p><a href="about.html" class="text-reset">About</a></p>
+                    <p><a href="../contact.html" class="text-reset">Contact</a></p>
+                </div>
+                <div class="col-md-4 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4">
+                        Contact
+                    </h5>
+                    <p><i class="fa-solid fa-location-dot"></i> African Leadership College, Beau Plan, Pamplemousses,
+                        Mauritius</p>
+                    <p><i class="fa-solid fa-envelope"></i> abbie@capilocator.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +23056789042</p>
+                </div>
+            </div>
+            <div class="text-center p-4">
+                <hr style="color: #124747;">
+                © 2023 Copyright:
+                <a class="text-reset fw-bold" href="#">CapiLocator.com</a>
+            </div>
+        </div>
+    </footer>
+    <!--Footer ends here-->
+
+    <!--scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="../cost.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

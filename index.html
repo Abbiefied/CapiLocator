@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/9e861a04ca.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9e861a04ca.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./CSS/style.css">
+
+
+    <title>CapiLocator</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand"><span><i
+                        class="fa-solid fa-location-arrow fa-2x arrow text-warning"></i></span>Capilocator</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Cost of living</a>
+                        <div class="dropdown-menu scrollable-menu" role="menu" id="countries-list">
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./HTML/comparison.html">Comparison</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./HTML/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!--Hero section-->
+    <section id="hero-section">
+        <div class="jumbotron jumbotron-fluid">
+            <video playsinline="playsinline" autoplay muted loop>
+                <source src="./Images/architecture-303.mp4" type="video/mp4">
+            </video>
+
+            <div class="container h-100">
+                <div class="row display-flex h-100 mt-5 text-center align-items-center">
+                    <div class="w-100 text-white">
+                        <h1 class="hero-text display-4">Compare the Cost of Living in Capital Cities Around the World
+                        </h1>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!--About section-->
+    <section id="about-section">
+        <div class="container">
+            <div class="row about pt-2 pb-5 mb-5 align-items-center">
+                <div class="col-sm-6 p-2 text-center">
+                    <h1 class="w-100" style="font-weight: bold; font-style: italic;">What is <div
+                            style="color: #ffdf2b;">CapiLocator?</div>
+                    </h1>
+                    <h6 class="text-white" style="line-height: 2;">CapiLocator is your travel and relocation buddy,
+                        designed to help you locate
+                        capital cities around the world and compare the cost of living in these cities.
+                        CapiLocator provides data on various expenses, including food, housing, transportation,
+                        healthcare,
+                        and more, to help you make informed decisions about your
+                        travel or relocation plans.
+                    </h6>
+                </div>
+                <div class="col-sm-6 p-0">
+                    <img src="./Images/landscape.png" class="w-100" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!--Features section-->
+    <section id="features-section">
+        <div class="container mt-5 pt-2">
+            <h1 class="text-center">FEATURES</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card border-0 text-center h-100">
+                        <img class="card-img-top" src="./Images/city.jpg" alt="cost of living">
+                        <div class="card-body">
+                            <h5 class="card-title">Cost of Living</h5>
+                            <p class="card-text text-white">Easy to use interface that provides accurate
+                                and up-to-date cost of living in any capital city in the world with
+                                interactive map that shows the exact location of the capital city. </p>
+                            <a href="#countries-list" class="btn">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0 text-center h-100">
+                        <img class="card-img-top" src="./Images/cost.jpg" alt="groceries">
+                        <div class="card-body">
+                            <h5 class="card-title">Cost Comparison Tool</h5>
+                            <p class="card-text text-white">Comparison tool to compare the cost of living
+                                between any capital cities in the world. The tool provides data and visualisation
+                                on various expenses including food, housing, transportation, and healthcare</p>
+                            <a href="./HTML/comparison.html" class="btn">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0 text-center h-100">
+                        <img class="card-img-top" src="./Images/school2.jpg" alt="school h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Schools</h5>
+                            <p class="card-text text-white">International schools database that provides all necessary
+                                information about the schools in all the cities in the world, including the capital
+                                cities.</p>
+                            <a href="https://www.international-schools-database.com/" target="_blank"
+                                class="btn">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Div to create wide gutter between containers-->
+    <div class="gutter"></div>
+
+    <!--Map section-->
+    <section id="map">
+        <div id="map1" class="z-depth-1-half map-container" style="height: 500px">
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="text-center text-lg-start text-muted">
+        <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3 pt-4">
+                <div class="col-md-5 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4">
+                        CapiLocator
+                    </h5>
+                    <div class="footer-text">
+                        <p>CapiLocator is a website designed to help users locate
+                            capital cities around the world and compare the cost of l
+                            iving in these cities. The website provides data on various
+                            expenses, including food, housing, transportation, healthcare,
+                            and more, to help users make informed decisions about their
+                            travel or relocation plans.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4">
+                        Useful Links
+                    </h5>
+                    <p><a href="./HTML/comparison.html" class="text-reset">Comparison Tool</a></p>
+                    <p><a href="https://www.international-schools-database.com/" target="_blank"
+                            class="text-reset">Schools</a></p>
+                    <p><a href="./HTML/about.html" class="text-reset">About</a></p>
+                    <p><a href="contact.html" class="text-reset">Contact</a></p>
+                </div>
+                <div class="col-md-4 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4">
+                        Contact
+                    </h5>
+                    <p><i class="fa-solid fa-location-dot"></i> African Leadership College, Beau Plan, Pamplemousses,
+                        Mauritius</p>
+                    <p><i class="fa-solid fa-envelope"></i> abbie@capilocator.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +23056789042</p>
+                </div>
+            </div>
+            <div class="text-center p-4">
+                <hr style="color: #124747;">
+                © 2023 Copyright:
+                <a class="text-reset fw-bold" href="#">CapiLocator.com</a>
+            </div>
+        </div>
+    </footer>
+    <!--Footer ends here-->
+
+    <!--scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQb008yhHF8gs50DFD_67HaJopYtFfa2Y&callback=initMap1"></script>
+</body>
+</html>

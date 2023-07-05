@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/9e861a04ca.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9e861a04ca.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@300;700&display=swap"
+        rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Cost of Living</title>
+</head>
+
+<body onload="getCostOfLivingData()">
+    <!-- <div class="container"> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand"><span><i
+                    class="fa-solid fa-location-arrow fa-2x arrow text-warning"></i></span>Capilocator</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Cost of living</a>
+                    <div class="dropdown-menu scrollable-menu" role="menu" id="countries-list">
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparison.html">Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<!--Nav ends here-->
+
+    <!-- Country details section starts here-->
+    <section class="container" id="country-section">
+        <div class="row display-flex about pt-2 mb-8">
+            <div class="col-sm-6 p-1" id="country-details">
+                <div class="text-center">
+                    <p>
+                    <h3 id="country-name" style="color: #ffdf2b;"></h3>
+                    </p>
+                    <p>
+                    <h3 id="capital" style="color: white;"></h3>
+                    </p>
+                </div>
+                <div class="mb-4" id="country-about" style="color: #fff;">
+                </div>
+                <div class="text-center mt-auto" id="country-links">
+                    <h5><a href="#quality_of_life">Quality of life</a>
+                        <a href="#crime_rate">Crime rate</a>
+                        <a href="#property_prices">Property prices</a>
+                        <a href="#schools">Schools</a>
+                    </h5>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <img src="" class="w-100" alt="Flag" id="flag">
+            </div>
+        </div>
+        <div id="country-indicators">
+            <h4 id="headings">Quality of Life Indicators</h4>
+            <p>GDP Per Capita: $<span id="gdpPerCapita"></span></p>
+            <p>GDP Growth: <span id="gdp-growth"></span>%</p>
+            <p>CO2 Emissions: <span id="co2Emissions"></span>%</p>
+            <p>Internet Users: <span id="internetUsers"></span>%</p>
+            <p>Urban growth rate: <span id="urbanGrowth">%</span></p>
+            <p>Secondary School Enrollment(Female): <span id="secondarySchoolFemale"></span>%</p>
+            <p>Secondary School Enrollment(Male): <span id="secondarySchoolMale"></span>%</p>
+            <p>Unemployment Rate: <span id="unemployment"></span>%</p>
+            <p>Homicide Rate: <span id="homicide"></span>%</p>
+            <p>Fertility: <span id="fertility"></span>%</p>
+            <p>Infant Mortality: <span id="infantMortality"></span>%</p>
+        </div>
+        <div class="cost-of-living mt-5">
+            <h4 id="headings">Cost of Living in the Capital City</h4>
+            <div id="prices-list"></div>
+        </div>
+        <div class="pieChart my-3 pb-5">
+            <h4 id="headings">Distribution of Expenses</h4>
+            <canvas id="pie-chart"></canvas>
+        </div>
+    </section>
+<!--Country details section ends here-->
+
+<!--School section starts here-->
+    <section id="school-section">
+        <div class="container">
+            <div class="row display-flex about pt-2 pb-5 mb-5">
+                <div class="col-sm-6 p-0 text-center" id="school">
+                    <h1 class="w-100 mt-5" style="font-weight: bold; font-style: italic;">International<div
+                            style="color: #ffdf2b;">Schools</div>
+                    </h1>
+                    <h6 class="text-white m-4">Check out the best international school for your child from our
+                        international schools database and get all the necessary information before you relocate.</h6>
+                    <a href="https://www.international-schools-database.com/" target="_blank"
+                        class="btn rounded-pill mt-auto">View Schools</a>
+                </div>
+                <div class="col-sm-6 p-0">
+                    <img src="../images/school.jpg" class="w-100" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+<!--School section ends here-->
+
+<!--Map container-->
+    <div id="map" style="height: 400px; width: 100%;"></div>
+
+<!--Footer-->
+<footer class="text-center text-lg-start text-muted">
+    <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3 pt-4">
+            <div class="col-md-5 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold mb-4">
+                    CapiLocator
+                </h5>
+                <div class="footer-text">
+                <p>CapiLocator is a website designed to help users locate 
+                    capital cities around the world and compare the cost of l
+                    iving in these cities. The website provides data on various 
+                    expenses, including food, housing, transportation, healthcare, 
+                    and more, to help users make informed decisions about their 
+                    travel or relocation plans.
+                </p>
+            </div>
+            </div>
+            <div class="col-md-3 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold mb-4">
+                    Useful Links
+                </h5>
+                <p><a href="comparison.html" class="text-reset">Comparison Tool</a></p>
+                    <p><a href="https://www.international-schools-database.com/" target="_blank" class="text-reset">Schools</a></p>
+                    <p><a href="about.html" class="text-reset">About</a></p>
+                    <p><a href="../contact.html" class="text-reset">Contact</a></p>
+            </div>
+            <div class="col-md-4 mx-auto mb-4">
+                <h5 class="text-uppercase fw-bold mb-4">
+                    Contact
+                </h5>
+                <p><i class="fa-solid fa-location-dot"></i> African Leadership College, Beau Plan, Pamplemousses,
+                    Mauritius</p>
+                <p><i class="fa-solid fa-envelope"></i> abbie@capilocator.com</p>
+                <p><i class="fa-solid fa-phone"></i> +23056789042</p>
+            </div>
+        </div>
+        <div class="text-center p-4">
+            <hr style="color: #124747;">
+            © 2023 Copyright:
+            <a class="text-reset fw-bold" href="#">CapiLocator.com</a>
+          </div>
+    </div>
+</footer>
+<!--Footer ends here-->
+
+<!--scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="../cost.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQb008yhHF8gs50DFD_67HaJopYtFfa2Y&callback=initMap2"></script>
+
+</body>
+
+</html>

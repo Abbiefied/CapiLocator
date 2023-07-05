@@ -1,0 +1,21 @@
+function fibonacciGenerator(n) {
+    var output = [];
+
+    if (n === 1) {
+        output.push(0);
+    } else if (n === 2) {
+        output.push(1);
+    } else {
+        output.push(0, 1);
+        for (var i = 2; i <= n; i++) {
+            var prev = output[output.length - 1];
+            var prev2 = output[output.length - 2];
+            output.push(prev + prev2);
+        }
+
+    }
+    return output;
+}
+
+output = fibonacciGenerator(4);
+console.log(output)
